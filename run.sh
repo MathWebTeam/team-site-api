@@ -6,4 +6,4 @@ if [ "$pid" != "" ] ; then
   kill -9 $pid
 fi
 
-setsid java -jar target/team-site-api-1.0-SNAPSHOT.jar > /dev/null 2>&1 &
+BUILD_ID=dontKillMe nohup java -jar target/team-site-api-1.0-SNAPSHOT.jar > /dev/null 2>&1 &
